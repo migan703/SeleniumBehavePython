@@ -1,6 +1,56 @@
-Feature: Open website and print title # features/first_selenium.feature:1
+Feature: Enter facebook's website with a new user # features/facebook.feature:1
 
-  Scenario: Open website                   # features/first_selenium.feature:3
-    Given I open seleniumframework website # features/steps/first_selenium.py:6
-    Then I print the title                 # features/steps/first_selenium.py:11
+  Scenario: Enter to the website with a new woman's account  # features/facebook.feature:3
+    Given I am in Facebook page                              # features/steps/facebook.py:5
+    When I create a new user for a woman                     # features/steps/facebook.py:9
+    Then I can log into Facebook as a woman                  # features/steps/facebook.py:23
+      Assertion Failed: FAILED SUB-STEP: Then LogIn into facebook as a woman
+      Substep info: Traceback (most recent call last):
+        File "c:\users\migan\appdata\local\programs\python\python37-32\lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+        File "c:\users\migan\appdata\local\programs\python\python37-32\lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "C:\Users\migan\Desktop\TestAutomation\Selenium\python_behave_template-master\features\steps\logIn.py", line 11, in step_impl
+          homePage_.setEmail(womanEmail)
+        File "C:\Users\migan\Desktop\TestAutomation\Selenium\python_behave_template-master\features\pages\homePage.py", line 75, in setEmail
+          elem = self.driver.find_elements_by_name(self.idEmail).click()
+      AttributeError: 'list' object has no attribute 'click'
+      
+      Traceback (of failed substep):
+        File "c:\users\migan\appdata\local\programs\python\python37-32\lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+        File "c:\users\migan\appdata\local\programs\python\python37-32\lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "C:\Users\migan\Desktop\TestAutomation\Selenium\python_behave_template-master\features\steps\logIn.py", line 11, in step_impl
+          homePage_.setEmail(womanEmail)
+        File "C:\Users\migan\Desktop\TestAutomation\Selenium\python_behave_template-master\features\pages\homePage.py", line 75, in setEmail
+          elem = self.driver.find_elements_by_name(self.idEmail).click()
+
+
+  Scenario: Enter to the website with a new man's account  # features/facebook.feature:8
+    Given I am in Facebook page                            # features/steps/facebook.py:5
+    When I create a new user for a man                     # features/steps/facebook.py:16
+    Then I can log into Facebook as a man                  # features/steps/facebook.py:27
+      Assertion Failed: FAILED SUB-STEP: Then LogIn into facebook as a man
+      Substep info: Traceback (most recent call last):
+        File "c:\users\migan\appdata\local\programs\python\python37-32\lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+        File "c:\users\migan\appdata\local\programs\python\python37-32\lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "C:\Users\migan\Desktop\TestAutomation\Selenium\python_behave_template-master\features\steps\logIn.py", line 19, in step_impl
+          homePage_.setEmail(manEmail)
+        File "C:\Users\migan\Desktop\TestAutomation\Selenium\python_behave_template-master\features\pages\homePage.py", line 75, in setEmail
+          elem = self.driver.find_elements_by_name(self.idEmail).click()
+      AttributeError: 'list' object has no attribute 'click'
+      
+      Traceback (of failed substep):
+        File "c:\users\migan\appdata\local\programs\python\python37-32\lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+        File "c:\users\migan\appdata\local\programs\python\python37-32\lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "C:\Users\migan\Desktop\TestAutomation\Selenium\python_behave_template-master\features\steps\logIn.py", line 19, in step_impl
+          homePage_.setEmail(manEmail)
+        File "C:\Users\migan\Desktop\TestAutomation\Selenium\python_behave_template-master\features\pages\homePage.py", line 75, in setEmail
+          elem = self.driver.find_elements_by_name(self.idEmail).click()
+
 

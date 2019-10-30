@@ -1,4 +1,5 @@
-from basePage import basePage
+from selenium.webdriver.common.keys import Keys
+from features.pages.basePage import basePage
 
 class homePage(basePage):
     idFristNameReg = 'firstname' # name
@@ -9,10 +10,10 @@ class homePage(basePage):
     idMonthReg = 'birthday_month' # name
     idDateReg = 'birthday_day' # name
     idYearReg = 'birthday_year' # name
-    idFemaleReg = '._8esa[value="1"]'  # xpath
-    idMaleReg = '._8esa[value="2"]' # xpath
+    idFemaleReg = 'u_0_6' # id
+    idMaleReg = 'u_0_7' # id
     idSingUpButton = 'websubmit' # name
-    idSingInButton = 'u_0_b' # id
+    idSingInButton = 'login_form' # id
     idEmail = 'email' # name
     idPassword = 'pass' # name
     idLogInButton = 'u_0_c' # id
@@ -53,11 +54,11 @@ class homePage(basePage):
         year_.send_keys(year)
 
     def setFemale(self):
-        elem = self.driver.find_element_by_xpath(self.idFemaleReg)
+        elem = self.driver.find_element_by_id(self.idFemaleReg)
         elem.click()
 
     def setMale(self):
-        elem = self.driver.find_element_by_xpath(self.idMaleReg)
+        elem = self.driver.find_element_by_id(self.idMaleReg)
         elem.click()
 
     def singUp(self):
@@ -66,7 +67,9 @@ class homePage(basePage):
     
     def singIn(self):
         elem = self.driver.find_elements_by_id(self.idSingInButton)
-        elem.click()
+        print(elem)
+        elem.send_keys(Keys.ENTER)
+        #elem.click()
     
     def setEmail(self,email):
         elem = self.driver.find_elements_by_name(self.idEmail)
