@@ -13,7 +13,7 @@ class homePage(basePage):
     idFemaleReg = 'u_0_6' # id
     idMaleReg = 'u_0_7' # id
     idSingUpButton = 'websubmit' # name
-    idSingInButton = 'login_form' # id
+    idSingInButton = 'menu_login_show_link' # id
     idEmail = 'email' # name
     idPassword = 'pass' # name
     idLogInButton = 'u_0_c' # id
@@ -42,7 +42,7 @@ class homePage(basePage):
         self.setName(name_)
         self.setLastName(lastName_)
         self.setEmailReg(email_)
-        #self.setConfirmEmail(email_) # No registrar el usuario
+        #self.setConfirmEmail(email_) # No registra el usuario
         self.setPasswordReg(_password)
 
     def setBirthday(self,day,month,year):
@@ -66,19 +66,18 @@ class homePage(basePage):
         elem.click()
     
     def singIn(self):
-        elem = self.driver.find_elements_by_id(self.idSingInButton)
+        elem = self.driver.find_element_by_id(self.idSingInButton)
         print(elem)
-        elem.send_keys(Keys.ENTER)
-        #elem.click()
+        elem.click()
     
     def setEmail(self,email):
-        elem = self.driver.find_elements_by_name(self.idEmail)
+        elem = self.driver.find_element_by_id(self.idEmail)
         elem.send_keys(email)
     
     def setPassword(self,password):
-        elem = self.driver.find_elements_by_name(self.idPassword)
+        elem = self.driver.find_element_by_id(self.idPassword)
         elem.send_keys(password)
 
     def logIn(self):
-        elem = self.driver.find_elements_by_id(self.idLogInButton)
+        elem = self.driver.find_element_by_id(self.idLogInButton)
         elem.click()

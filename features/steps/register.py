@@ -4,7 +4,7 @@ from features.utilities.Data import *
 
 use_step_matcher("re")
 
-@step('Navigate into facebook page') # Si cambio a given funciona.
+@step('Navigate into facebook page')
 def step_impl(context):
     homePage_ = homePage()
     homePage_.navigate()
@@ -27,4 +27,4 @@ def step_impl(context):
 @step('Click singUp button')
 def step_impl(context):
     homePage_ = context.homePage_
-    homePage_.singUp() # Falta cerrar la página porque se están quedando abiertas 4 instancias.
+    homePage_.singUp()
