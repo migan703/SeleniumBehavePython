@@ -10,7 +10,7 @@ def step_impl(context):
     homePage_.singIn()
     homePage_.setEmail(womanEmail)
     homePage_.setPassword(password)
-    homePage_.logIn()
+    homePage_.logIn(screenShootsPath + '/' + 'accessW.png')
 
 @step('LogIn into facebook as a man')
 def step_impl(context):
@@ -18,4 +18,4 @@ def step_impl(context):
     homePage_.singIn()
     homePage_.setEmail(manEmail)
     homePage_.setPassword(password)
-    homePage_.logIn()
+    homePage_.logIn(screenShootsPath + '/' + 'accessM.png')

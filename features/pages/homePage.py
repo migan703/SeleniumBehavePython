@@ -42,7 +42,7 @@ class homePage(basePage):
         self.setName(name_)
         self.setLastName(lastName_)
         self.setEmailReg(email_)
-        #self.setConfirmEmail(email_) # No registra el usuario
+        self.setConfirmEmail(email_)
         self.setPasswordReg(_password)
 
     def setBirthday(self,day,month,year):
@@ -61,7 +61,8 @@ class homePage(basePage):
         elem = self.driver.find_element_by_id(self.idMaleReg)
         elem.click()
 
-    def singUp(self):
+    def singUp(self, file):
+        self.driver.get_screenshot_as_file(file)
         elem = self.driver.find_element_by_name(self.idSingUpButton)
         elem.click()
     
@@ -78,6 +79,7 @@ class homePage(basePage):
         elem = self.driver.find_element_by_id(self.idPassword)
         elem.send_keys(password)
 
-    def logIn(self):
+    def logIn(self,file):
+        self.driver.save_screenshot(file)
         elem = self.driver.find_element_by_id(self.idLogInButton)
         elem.click()

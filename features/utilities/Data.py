@@ -1,10 +1,11 @@
+screenShootsPath = 'C:/Users/migan/Desktop/TestAutomation/Selenium/python_behave_template-master/screenshoots'
 womanName = 'Luisa'
 womanLastName = 'Jimenez'
 manName = 'Juan'
 manLastName = 'Ledesma'
 password = 'pass123'
-womanEmail = 'migan708@gmail.com'
-manEmail = 'migan709@gmail.com'
+womanEmail = 'migan705@gmail.com'
+manEmail = 'migan706@gmail.com'
 date = 21
 month = 'Aug'
 year = 1980

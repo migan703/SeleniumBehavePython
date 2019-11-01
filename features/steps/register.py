@@ -27,4 +27,4 @@ def step_impl(context):
 @step('Click singUp button')
 def step_impl(context):
     homePage_ = context.homePage_
-    homePage_.singUp()
+    homePage_.singUp(screenShootsPath + '/' + 'register.png')

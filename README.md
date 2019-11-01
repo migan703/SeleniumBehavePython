@@ -1,4 +1,4 @@
-Examples of automation using selenium webdriver, pytho, behave and POM
+Examples of automation using selenium webdriver, python, behave and POM
 
 # Website
 Simple examples were taken from a repository that is part of all tutorials on (http://www.seleniumframework.com)  
